@@ -17,7 +17,7 @@ child.on("message2",function (message2) {
 })
 // k
  const app=express()
- app.get("/",()=>{
+ app.get("/",(req,res)=>{
    res.status(200).send("Hello....")
  })
 
