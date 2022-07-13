@@ -1,0 +1,20 @@
+{
+  "name": "child_p",
+  "version": "1.0.0",
+  "description": "to check child process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "12.13.0"
+  },
+  "author": "@bhi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "node-openvpn": "^0.1.1",
+    "telnet-client": "^2.0.3"
+  }
+}
