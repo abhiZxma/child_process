@@ -20,6 +20,9 @@ child.on("message2",function (message2) {
  app.get("/",(req,res)=>{
    res.status(200).send("Hello....")
  })
+ app.get("/home",(req,res)=>{
+  res.status(200).send("Hello Home")
+})
 
 // exec('ls',(err,stdout,stderr)=>{
 //     if(err){
