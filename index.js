@@ -1,8 +1,6 @@
 const express=require('express')
-const { Telnet } = require('telnet-client')
 
 const {fork}=require('child_process');
-const res = require('express/lib/response');
 const child = fork("boom_bam.js");
 
 child.send(29);
