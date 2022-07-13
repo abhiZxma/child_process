@@ -22,6 +22,8 @@ child.on("message2",function (message2) {
   res.status(200).send("Hello Home")
 })
 
+let PORT=process.env.PORT || 8000
+
 // exec('ls',(err,stdout,stderr)=>{
 //     if(err){
 //         console.log("error--------->",err.message)
@@ -39,6 +41,6 @@ child.on("message2",function (message2) {
 //   throw error
 // })
 
- app.listen(8000,console.log("server started running on 8000 "))
+ app.listen(PORT,console.log("server started running on 8000 "))
 
 
