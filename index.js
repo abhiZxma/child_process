@@ -1,19 +1,19 @@
 const express=require('express')
-
+const loginCtrl=require('./controllers/login.controllers')
 const {fork}=require('child_process');
 const child = fork("boom_bam.js");
 
 child.send(29);
 
-child.on("message",function (message) {
-  console.log(`Message from child.js: ${message}`);
+// child.on("message",function (message) {
+//   console.log(`Message from child.js: ${message}`);
 
-})
-child.on("message2",function (message2) {
-  console.log(`Message from child.js: ${message2}`);
+// })
+// child.on("message2",function (message2) {
+//   console.log(`Message from child.js: ${message2}`);
 
-})
-// k
+// })
+// // k
  const app=express()
  app.get("/",(req,res)=>{
    res.status(200).send("Hello....")
@@ -21,7 +21,7 @@ child.on("message2",function (message2) {
  app.get("/home",(req,res)=>{
   res.status(200).send("Hello Home")
 })
-
+app.use('/login',loginCtrl)
 let PORT=process.env.PORT || 8000
 
 // exec('ls',(err,stdout,stderr)=>{
